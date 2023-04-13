@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+.categories__list {
+    display: flex;
+    align-items: center;
+}
+
+.category_badge {
+    background-color: #4f4fd9;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.category__text {
+    font-weight: bold;
+}
+
+.category_badge > * {
+    margin: 0 10px;
+}
+
+.product__list {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+}
+

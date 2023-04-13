@@ -6,10 +6,27 @@
 
 <div id="products">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+   <div class="product__list">
+     <%= render product %>
+     <% if product.categories.any? %>
+       <div class="product_categories">
+         <div class="categories">
+           <div class="category__text">Categories</div>
+           <% product.categories.each do | cat | %>
+             <div class="categories__list">
+               <div class="category_badge"><%= cat.title %></div>
+             </div>
+           <%end %>
+         </div>
+       </div>
+     <%end %>
+     <p>
+       <%= link_to "Show this product", product %>
+     </p>
+   </div>
+
+
+
   <% end %>
 </div>
 
