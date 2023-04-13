@@ -14,7 +14,9 @@
            <div class="category__text">Categories</div>
            <% product.categories.each do | cat | %>
              <div class="categories__list">
-               <div class="category_badge"><%= cat.title %></div>
+               <div class="category_badge">
+                 <%= link_to category_path(cat), category_path(cat) %>
+               </div>
              </div>
            <%end %>
          </div>

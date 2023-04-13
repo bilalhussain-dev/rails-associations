@@ -1,7 +1,10 @@
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Title:</strong>
+  <div class="category">
     <%= category.title %>
-  </p>
+    <div class="products__found">
+      <span>Products: (<%= category.products.count %>)</span>
+      <span>Brows Products: <%= link_to category_path(category), category_path(category) %></span>
+    </div>
+  </div>
 
 </div>
